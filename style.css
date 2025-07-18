@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Mitr', sans-serif;
+  min-height: 100vh;
+  background: url('https://media.giphy.com/media/l2R0cE5EqO3QHiCoU/giphy.gif') center/cover no-repeat fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: white;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bubble-box {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 20px 25px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+h1, h2 {
+  font-size: 1.6em;
+  margin-bottom: 10px;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7;
+  white-space: pre-line;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.animated-text {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 1em;
+  font-family: 'Mitr', sans-serif;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  h1, h2 {
+    font-size: 1.4em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  button {
+    width: 100%;
+  }
+}
