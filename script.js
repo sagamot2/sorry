@@ -1,3 +1,2 @@
-function showMessage() {
-  window.location.href = "letter.html";
-}
+document.addEventListener("DOMContentLoaded", () => {
+});
